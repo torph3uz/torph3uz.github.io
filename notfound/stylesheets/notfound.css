@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1rem;
+}
+
+.header--title {
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+
+.main--image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+}
+
+.section--title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.section--text {
+  font-size: 1.125rem;
+  margin-bottom: 4rem;
+}
+
+.section--btn {
+  background-color: #333;
+  color: #fff;
+  display: block;
+  width: 200px;
+  height: 70px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 70px;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-rows: 6.25rem auto 6.25rem;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .main--image {
+    max-width: 31.25rem;
+    height: auto;
+    margin-bottom: 0;
+    padding: 1rem;
+    justify-self: center;
+  }
+
+  section {
+    padding: 1rem;
+  }
+  
+  .section--title {
+    max-width: 37.5rem;
+    font-size: 4rem;
+  }
+
+  .section--text {
+    max-width: 31.25rem;
+    font-size: 1.5rem;
+  }
+}

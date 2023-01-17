@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER STYLES */
+.header--title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.header--description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.dots {
+  color: #C4C4C4;
+  writing-mode: vertical-lr;
+  cursor: default;
+  user-select: none;
+}
+
+.header--description > p {
+  max-width: 590px;
+}
+
+.header--hero-image {
+  width: 100%;
+  height: auto;
+}
+
+/* SECTION INGREDIENTS' STYLES */
+.section-ingredients {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+}
+
+.ingredients {
+  grid-row: 2 / -1;
+}
+
+/* COOKING PREPARATION STYLES */
+.cooking-preparation {
+  grid-row: 1 / 2;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 2rem;
+  margin: 2rem 0;
+}
+
+.cooking-preparation div:first-child {
+  flex: 0 1 100%;
+}
+
+.cooking-preparation div:not(:first-child) {
+  flex: 1 2 auto;
+}
+
+.cooking-preparation div > span {
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.cooking-preparation div:first-child span,
+.cooking-preparation div:first-child p {
+  color: #F2994A;
+}
+
+.cooking-preparation h5 {
+  color: #BDBDBD;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.cooking-preparation div > p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* INGREDIENTS' STYLES */
+.ingredients--title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ingredients > h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.ingredients > ul {
+  margin-bottom: 2rem;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ingredients > ul > li {
+  display: flex;
+  column-gap: 0.5rem;
+  line-height: 1.5;
+  margin-bottom: 0.7rem;
+}
+
+.ingredients > ul > li > span:last-child {
+  display: inline;
+}
+
+/* INSTRUCTIONS' STYLES */
+.instructions {
+  margin-bottom: 1rem;
+}
+
+.instructions--title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* NOTE: Check manual numbering of list items using CSS */
+.instructions ol {
+  list-style-type: none;
+  counter-reset: li;
+}
+
+.instructions ol > li {
+  counter-increment: li;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  display: flex;
+  column-gap: 1rem;
+}
+
+.instructions ol > li::before {
+  content: counter(li);
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: #F2994A;
+  color: #fff;
+  min-width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 100%;
+  border-radius: 5px;
+}
+
+.instructions ol > li > p {
+  flex: 1 2 auto;
+}
+
+.source {
+  color: #BDBDBD;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 3rem;
+}
+
+.source > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  color: #828282;
+  font-size: 14px;
+  margin-top: auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* 768px SCREEN RESOLUTION */
+@media (min-width: 768px) {
+  .container {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  /* HEADER STYLES */
+  header {
+    margin-bottom: 2rem;
+  }
+
+  .header--title {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+  .header--description {
+    font-size: 14px;
+  }
+  
+  .dots {
+    color: #C4C4C4;
+    writing-mode: vertical-lr;
+    cursor: default;
+    user-select: none;
+  }
+  
+  .header--description > p {
+    max-width: 590px;
+  }
+
+  /* SECTION INGREDIENTS' STYLES */
+  .section-ingredients {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 80% 20%;
+  }
+
+    /* INGREDIENTS' STYLES */
+  .ingredients {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    max-width: 700px;
+    padding-right: 5rem;
+  }
+  
+  .ingredients--title {
+    font-size: 24px;
+  }
+
+  .ingredients > h3 {
+    font-size: 18px;
+  }
+
+  .ingredients > ul {
+    font-size: 16px;
+  }
+
+  /* COOKING PREPARATION STYLES */
+  .cooking-preparation {
+    grid-row: 1 / -1;
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 2rem;
+    max-height: 340px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cooking-preparation div:first-child,
+  .cooking-preparation div:not(:first-child) {
+    flex: 0 1 auto;
+  }
+  
+  .cooking-preparation h5 {
+    color: #BDBDBD;
+    font-size: 10px;
+  }
+  
+  .cooking-preparation div > p {
+    font-size: 14px;
+  }
+
+  /* INSTRUCTIONS TITLE */
+  .instructions {
+    max-width: 700px;
+    padding-right: 5rem;
+  }
+
+  .instructions--title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}
