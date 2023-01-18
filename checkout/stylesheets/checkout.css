@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 24px;
+  color: #4E5150;
+  margin-bottom: 1rem;
+}
+
+/* CHECKOUT SECTION STYLES */
+.checkout {
+  width: 100%;
+  background-color: #F2F2F2;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.checkout--item {
+  width: 100%;
+  display: flex;
+  margin-bottom: 2rem;
+  column-gap: 1rem;
+}
+
+.checkout--item-image {
+  max-width: 125px;
+  height: auto;
+  border-radius: 13px;
+}
+
+.checkout--item-details {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout--item-name {
+  color: #4E5150;
+  font-size: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.checkout--item-price {
+  color: #F2994A;
+  font-size: 14px;
+}
+
+.checkout--item-price span {
+  color: #4E5150;
+  font-size: 10px;
+  margin-left: 0.5rem;
+}
+
+.checkout--item-quantity {
+  margin-top: auto;
+  max-width: 120px;
+  padding: 0.7rem;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  display: flex;
+}
+
+.checkout--item-quantity-btn {
+  background-color: #E0E0E0;
+  color: #828282;
+  font-size: 1rem;
+  width: 20px;
+  height: 20px;
+  padding: 0 0.30rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* REMOVE ARROWS INSIDE INPUT TYPE NUMBER */
+/* CHROME, SAFARI, EDGE, OPERA */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* FIREFOX */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.checkout--item-quantity-input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.checkout--total {
+  margin-top: 4rem;
+  color: #333;
+  font-size: 14px;
+  width: 100%;
+}
+
+.checkout--total-price {
+  padding: 0.7rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout--total-price:first-of-type {
+  border-top: 1px solid #BDBDBD;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+/* FORM SECTION STYLES */
+.form-user-info h2 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.form-user-info label {
+  font-size: 10px;
+  color: #4F4F4F;
+}
+
+.select-input {
+  color: lightslategrey;
+}
+
+.form-input {
+  margin-bottom: 1rem;
+}
+
+.shipping {
+  margin-top: 3.5rem;
+}
+
+.checkbox-input {
+  vertical-align: middle;
+}
+
+.form-user-info input:not([type=checkbox]),
+.select-input {
+  font-size: 12px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 0.5rem;
+}
+
+.form-input-group {
+  margin-top: 0.5rem;
+  padding-right: 0.5rem;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 30px auto;
+  align-items: center;
+}
+
+.form-icon {
+  font-size: 1.25rem;
+  color: #828282;
+  padding: 0.5rem;
+}
+
+.btn-continue {
+  display: block;
+  width: 150px;
+  height: 50px;
+  font-size: 1rem;
+  background-color: #F2994A;
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* CUSTOM CHECKBOX STYLES */
+.checkbox-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 1.7rem;
+  line-height: 20px; /* to center the label text vertically */
+}
+
+/* HIDE DEFAULT CHECKBOX */
+.checkbox-label input {
+  position: absolute;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* CREATE CUSTOM CHECKBOX */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #828282;
+  border-radius: 5px;
+}
+
+/* When the checkbox is checked add an orange background */
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #F2994A;
+}
+
+/* checkmark hidden when not checked */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+ /* display checkmark when checked */
+.checkbox-label input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* checkmark styles */
+.checkbox-label .checkmark::after {
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+footer {
+  margin-top: auto;
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 768px) {
+  .container {
+    max-width: 992px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+  }
+
+  .heading {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    font-size: 36px;
+    margin-bottom: 3rem;
+  }
+
+  .form-section {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    max-width: 500px;
+    margin-bottom: 5rem;
+    padding-right: 1rem;
+  }
+
+  .form-user-info h2 {
+    font-size: 18px;
+  }
+
+  .form-user-info label {
+    font-size: 12px;
+  }
+
+  .checkout {
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+    max-height: 500px;
+  }
+
+  .checkout--item-name {
+    font-size: 1rem;
+  }
+  
+  .checkout--item-price {
+    font-size: 1rem;
+  }
+  
+  .checkout--item-price span {
+    font-size: 12px;
+  }
+
+  .checkout--total {
+    font-size: 18px;
+  }
+
+  .checkout--total-price > p:last-child {
+    font-size: 14px;
+  }
+
+  footer {
+    grid-row: 4 / -1;
+    grid-column: 1 / -1;
+  }
+}
